@@ -1,0 +1,9 @@
+->aapde javascript no code browser ma run kari sakie chie pan suh aapde javascript no code browser ni bahar run kari sakie?javascript browser ma j run thay karan ke browser ma javascript nu engine hoy che etle
+e engine ne v8 engine kehvay 
+->have ryan dahl name na manas e v8 engine ne chrome ma thi kadhyu ane c++ na code jode merge karyu ene node js name aapyu.have nodejs aavya pachi aapde javascript ne browser ni bahar run kari sakie chie
+->nodejs is a runtime environment for javascript.
+->LTS=long term support matlab ene aapde production ma use kari sakie chie jyare current ne aapde production ma use nai kari sakie
+->console.log(window) aavu aapde hello.js ma karsu to error aavse pan aa j vastu aapde inspect par jai console ma karsu to brbr run thase e 
+alert ma pan same aaj thase
+->npm init lakhva thi package.json banse ane e package.json ma aapde badhi script lakhi sakie pachi je package download karie te package ni dependencies ne evu package.json ma aavi jase
+aapde package.json ni script ma "dev":"node index.js" aam lakhie eno matlab jyare aapde terminal ma npm run dev lakhsu etle internally teh node index.js ne run karse
