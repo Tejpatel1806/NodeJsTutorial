@@ -7,3 +7,25 @@ e engine ne v8 engine kehvay
 alert ma pan same aaj thase
 ->npm init lakhva thi package.json banse ane e package.json ma aapde badhi script lakhi sakie pachi je package download karie te package ni dependencies ne evu package.json ma aavi jase
 aapde package.json ni script ma "dev":"node index.js" aam lakhie eno matlab jyare aapde terminal ma npm run dev lakhsu etle internally teh node index.js ne run karse
+->NodeJs Architecture:-
+jevo client server par request mokalse ke tarat j te request event queue ma jati rehse have event loop continuous check kartu j rehse ke event queue ma koi request che ke nai em have event queue ma je request hoy e 2 type ni hoy 1>Blocking operation(Synchronous Task)
+2>non-blocking operation(Asynchronous Task) jo event queue ma request hase e asynchronous hase to e execute thase ( on the spot) ane response client ne madi jase
+pan jo e request blocking(synchronous) hase to te kam mate ek thread provide karse thread e kam puru kari ne data return karse etle e as a response tarike client ne jato rehse
+default thread size 4 hoy che ene aapde nodejs na os module ni madad thi vadhari sakie chie
+have blocking operations ma evu bani sake ke aapda jode 4 j thread che to have aapda jode first 4 user aavya to temne 4 thread madi gaya have je 5 mo user aavse te wait karse ke jo aama thi koi thread khali thay to te ene made to aama waiting time ne em bau vadhi jase
+->non blocking means asynchronous operation ema e wait nai kare ke e task complete thai jay pachi j aagad vadhu em e aagad nu kam karto rehse ane jevu pelu kam puru thase ke enu result aapse example:-
+console.log("1");
+fs.readFile("./read.txt","utf-8",(err,data)=>{
+    if(err)
+    {
+        console.log('Error',err);
+    }
+    else
+    {
+        console.log(data);
+    }
+})
+console.log("2");
+output:- 1 2 data 
+means aa file ma thi data aavvani rah nai jove karan ke aa asynchronous opration che e agad ni line execute karva j lagse etle output 1 2 data aavse 
+->jyare blocking operation means e wait karse jya sudhi file ma thi data aavi na jay tya sudhi etle tema output 1 data 2 aavse
