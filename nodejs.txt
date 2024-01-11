@@ -29,3 +29,9 @@ console.log("2");
 output:- 1 2 data 
 means aa file ma thi data aavvani rah nai jove karan ke aa asynchronous opration che e agad ni line execute karva j lagse etle output 1 2 data aavse 
 ->jyare blocking operation means e wait karse jya sudhi file ma thi data aavi na jay tya sudhi etle tema output 1 data 2 aavse
+
+->URL=Uniform resource locator
+  https://www.piyushgarg.dev/
+  protocol:- https(secure)hypertext transport protocol secure http(not secure)hyper text transport protocol
+  protocol is a set of rules that tells to browser how to communicate with the server.
+  www.piyushgarg.com aane domain kehvay domain che te user friendly name of ip address of my server
