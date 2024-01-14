@@ -1,15 +1,3 @@
-1704904301703 : New Request Received
-1704904301899 : New Request Received
-1704904304354 : New Request Received
-1704904304416 : New Request Received
-1704904305644 : New Request Received
-1704904305698 : New Request Received
-1704905472452 : New Request Received
-1704905486333 : New Request Received
-1704905486419 : New Request Received
-1704905507874 : New Request Received
-1704905507934 : New Request Received
-1704905517557 : New Request Received
-1704905517621 : New Request Received
-1704905545981 : New Request Received
-1704905552417 : New Request Received
+
+ Time is:- 1/13/2024 ,URL is:- /about?name=tej,Methos is:- GET  New Request Received
+ Time is:- 1/13/2024 ,URL is:- /favicon.ico,Methos is:- GET  New Request Received

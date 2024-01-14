@@ -1,17 +1,25 @@
 ->aapde javascript no code browser ma run kari sakie chie pan suh aapde javascript no code browser ni bahar run kari sakie?javascript browser ma j run thay karan ke browser ma javascript nu engine hoy che etle
 e engine ne v8 engine kehvay 
-->have ryan dahl name na manas e v8 engine ne chrome ma thi kadhyu ane c++ na code jode merge karyu ene node js name aapyu.have nodejs aavya pachi aapde javascript ne browser ni bahar run kari sakie chie
-->nodejs is a runtime environment for javascript.
+
+->have ryan dahl name na manas e v8 engine ne chrome ma thi kadhyu ane c++ na code jode merge karyu ene node js name aapyu.have nodejs aavya pachi aapde javascript ne browser ni bahar run kari sakie chie ane nodejs ni madad thi aapde webserver pan create kari sakie chie
+
+->nodejs is a runtime environment for javascript.matlab nodejs ek environment che ke jeni andar aapde javascript run kari sakie chie
+
 ->LTS=long term support matlab ene aapde production ma use kari sakie chie jyare current ne aapde production ma use nai kari sakie
+
+->npm=node package manager(jyare aapde nodejs ne install karie tyare npm automatic install thai j jase)
+
 ->console.log(window) aavu aapde hello.js ma karsu to error aavse pan aa j vastu aapde inspect par jai console ma karsu to brbr run thase e 
 alert ma pan same aaj thase
+
 ->npm init lakhva thi package.json banse ane e package.json ma aapde badhi script lakhi sakie pachi je package download karie te package ni dependencies ne evu package.json ma aavi jase
 aapde package.json ni script ma "dev":"node index.js" aam lakhie eno matlab jyare aapde terminal ma npm run dev lakhsu etle internally teh node index.js ne run karse
+
 ->NodeJs Architecture:-
 jevo client server par request mokalse ke tarat j te request event queue ma jati rehse have event loop continuous check kartu j rehse ke event queue ma koi request che ke nai em have event queue ma je request hoy e 2 type ni hoy 1>Blocking operation(Synchronous Task)
 2>non-blocking operation(Asynchronous Task) jo event queue ma request hase e asynchronous hase to e execute thase ( on the spot) ane response client ne madi jase
-pan jo e request blocking(synchronous) hase to te kam mate ek thread provide karse thread e kam puru kari ne data return karse etle e as a response tarike client ne jato rehse
-default thread size 4 hoy che ene aapde nodejs na os module ni madad thi vadhari sakie chie
+pan jo e request blocking(synchronous) hase to te kam mate ek thread provide thase ane thread e kam puru kari ne data return karse etle e as a response tarike client ne jato rehse
+default thread size 4 hoy che ene aapde nodejs na os module ni madad thi thread size vadhari sakie chie
 have blocking operations ma evu bani sake ke aapda jode 4 j thread che to have aapda jode first 4 user aavya to temne 4 thread madi gaya have je 5 mo user aavse te wait karse ke jo aama thi koi thread khali thay to te ene made to aama waiting time ne em bau vadhi jase
 ->non blocking means asynchronous operation ema e wait nai kare ke e task complete thai jay pachi j aagad vadhu em e aagad nu kam karto rehse ane jevu pelu kam puru thase ke enu result aapse example:-
 console.log("1");
@@ -32,6 +40,47 @@ means aa file ma thi data aavvani rah nai jove karan ke aa asynchronous opration
 
 ->URL=Uniform resource locator
   https://www.piyushgarg.dev/
-  protocol:- https(secure)hypertext transport protocol secure http(not secure)hyper text transport protocol
+ 1>protocol:- https(secure)hypertext transport protocol secure ,http(not secure)hyper text transport protocol
   protocol is a set of rules that tells to browser how to communicate with the server.
-  www.piyushgarg.com aane domain kehvay domain che te user friendly name of ip address of my server
+  https ma req ane res che te encrypt hase jyare http ma te encrypt nai hoy
+ 2>www.piyushgarg.com aane domain kehvay ,Domain is user friendly name of ip address of my server
+ 3> / che tene path kehvay / means home page or root page
+   piyushgarg.dev/project/1 :- aane nested path kehvay /project/1 ne nested path kehvay
+ 4>Query Parameter :- query parameter etle extra information ke je aapde aapda url jode pass kari sakie chie 
+ piyushgarg.dev/about?userId=1&a=2  aama /about path che ane ena pachi je che ene aapde query parameter kaisu query parameter ma key-value pair aave jene aapde & thi chuta padie 
+ aama key userId che ane eni value 2 che te rite bija ma key a che ane eni value 2 che ane e banne ne aapde & thi chuta padya che 
+
+ ->HTTP Methods:-
+ 1>GET:-when you want to get some data from the server(bydefault browser get request karse)
+ 2>POST:- matlab aapde server ne kaik data moklie chie ane te data aapdo database ma store thavo joie
+ (database ma new entry karva mate )
+ 3>PUT:-matlab database ma koi data che ane e data ma aapde kaik change karvo che to 
+ 4>DELETE:-matlab kaik delete karvu che aapde database ma thi
+
+ ->Versioning in node js:-
+ package.json ma aapde josu to dekhase ke express nu version ^4.18.2 che
+ first part :-4
+ second part:-18
+ third part:-2
+aama je third part che e optional hoy matlab minor changes hoy ema etle te update karie ke na karie toe chale means 4.18.2 ,4.18.1 ,4.18.3 aa badha ma minor changes hoy ena thi koi fer nai pade 
+aama je second part 18 che te Recommended bug fix(security fix) matlab aapdu version atyare 4.18.2 che ane e thayu 4.19.0 to ene update karvu padse aapde karan ke aa Recommended bug fix che ene aapde update karvo padse means aapde 4.18.2 ma thi 4.19.0 ma aavvu padse
+aama je first part che e major release,major/breaking update kehvay ene means atyare aapdu 4.18.2 che have navu version 5.0.1 aavyu to aane aapde update karvu joie ke nahi
+to jo aapde application 4.18.2 ma lakhi che ane have aapde update karsu to bani sake ke aapdo code 4.18.2  vado 5.0.1 ma na pan chale pan jo aapde navi j koi aplication banavta hoie to te 5.0.1 ma banavi joie
+->particular version nu express install karva mate npm install express@4.18.3 aam lakhvanu
+->^4.18.2 no matlab install all Recommended and minor changes automatically
+
+->What is Rest API?
+=>Rest api che e some rules based hoy
+1>server-client architecture :-means e evu ke che ke server ek alag machine che ane client ek alag machine che ane banne ekbija par dependent na hova joie
+assume karo ek server che ane ek client che have client game te hoi sake like browser,mobile,alexa game te
+have client e request mokli server par ane server as a response karyo pan response game te hoy sake like e text hoy,image hoy,JSON hoy,HTML document hoy 
+have assume karo ke server che te ek HTML document mokle che as a response tarike to jo client browser hase to vandho nai e ena page par HTML batai dese pan jo e mobile hase to e HTML ne kai rite batai sakse 
+to aano matlab evo thayo ke client che te server par dependent che ke server kayo data mokle che em to restfull api em ke che aavu na hovu joie e banne independent hova joie
+have aama evu bane ke jo appn ne pele thi khabar j che ke client che te browser j che to aapde HTML document moklie ema vandho nai pan aapn ne khabar nai to aapde JSON j moklisu have frontend side Reacthoy,mobile hoy je flutter ma banelu hoy,browser hoy to e frontend side decide karse ke aapde kai rite data ne batavo che em to have client ane server ekbija par dependent nathi
+2>always respect all HTTP methods
+means GET:-read the data from database and return
+POST :- create a new entry in database
+
+->Server side rendering means aapde server side j html page banai daie ane jevo client request mokle ke tarat j aapde te HTML page as a response tarike mokli daisu 
+client side rendering means aapde server as a response tarike JSON data mokle ane client te JSON ne HTML page ma convert kare 
+Server side rendering is fast and client side rendering is slow 

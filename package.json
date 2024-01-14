@@ -5,8 +5,12 @@
   "main": "hello.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tej":"node hello.js"
+    "tej": "node hello.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "url": "^0.11.3"
+  }
 }
