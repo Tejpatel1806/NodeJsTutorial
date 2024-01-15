@@ -84,3 +84,36 @@ POST :- create a new entry in database
 ->Server side rendering means aapde server side j html page banai daie ane jevo client request mokle ke tarat j aapde te HTML page as a response tarike mokli daisu 
 client side rendering means aapde server as a response tarike JSON data mokle ane client te JSON ne HTML page ma convert kare 
 Server side rendering is fast and client side rendering is slow 
+
+->express middleware:-
+middleware che te darek request ane response vakhte run thay 
+assume karo ke client che te ek request kare che /users(GET) par have te request pela middleware par jase pachi te app.get("/users") par jase to middleware custom hoy ke jema aapde lakhi sakie ke e request valid hoy to j app.get("/users")  par jay baki ene tya thi middleware thi j discard kari dese 
+ek code ma multiple middleware hoy sake 
+jem ke client e request kari /users(GET) par to te request app.get("/users") par jata pehla middleware1 par jay tya thi middleware2 par jay tya thi middleware3 par jay ane badha middleware ma thi pass thaya pachi te app.get("/users") par jay
+middleware jode request ane response object no access hoy etle te change pan kari sake request ane response object ma ,request-response cycle ne end pan kari sake
+middleware che te aa rite banai sakay:-  app.use((req,res,next)=>{
+
+})
+aama req ane res object che te je client request kare tyare aave te hoy ane next method che te next middleware ne call karva mate use thay ane jo next middleware koi na hoy to e actual function app.get("/") ne run karse 
+
+->HTTP Headers:-
+HTTP Headers is meta data about the request and response object.
+HTTP Header ma meta data store thayelo hoy e request ane response no like aa request kya thi aavyi ,kya mokalvani che ema content type suh che aavu badhu 
+RestfullAPIProject ma index.js ma custom Header ne evu banayu che joi levu
+
+->HTTP Status Code:-
+Informational responses(100-199)
+Successful responses(200-299)
+Redirectional messages(300-399)
+Client Error responses(400-499)
+Server Error responses(500-599)
+aapde status code res.status(200).json({data:"hello"}) aa rite mokli sakie 
+400 Bad Request means data ma kai locho che je data mokalvano hoy che ema thi aapde half j moklyo che amuk missing che em
+404 Not found 
+
+->MongoDB:-
+NOSQL Document Based database
+strong support for aggregation pipes
+works on BSON format
+Best for node application
+Mongodb che te document based hoy means tema ek collection hoy users name nu to e collection ma multiple document hoy have te document means actually entry hoy data ni 

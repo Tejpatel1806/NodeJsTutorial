@@ -7,9 +7,26 @@ const jsondata = require("./mockdata.json");
 
 //middleware/plugins
 //aapdo je body ma data aave che tene lavva mate aa plugins use thay ene middleware kehvay
+//built in body parser middleware request ma je body aave tene parse karva mate
 app.use(express.urlencoded({ extended: false }));
 
+//custom middleware
+//aa niche je che e custom middleware kehvay have te next() ne call kare che etle tena niche je middleware hase te call thase ane jo tena niche koi middleware nai hoy to te actual function ne call karse
+//middleware che te req-res ne end pan kari sake che jo aapde niche na middleware ma res.end("hello"); aam lakhi daie to e tya thi j end kari dese te middleware2 jode java j nai de ane main function jode pan nai java de
+//aapde middleware ma request ane response object ne change pan kari sakie chie ane te change badhe dekhase
+//gana badha built in middleware pan che aapde teno sidho use kari sakie chie
+app.use((req, res, next) => {
+  console.log("middleware1 called");
+  next();
+});
+app.use((req, res, next) => {
+  console.log("middleware2 called");
+  next();
+});
+
 app.get("/api/users", (req, res) => {
+  res.setHeader("X-myname", "tejpatel"); //aane custom Header kehvay matlab aapde response na Header ma key-value pair add kari ,request na Header ma add karva mate aapde postman ma add kari saksu reuqest Header ma jai ne
+  //content Type ne eva builtin Header che pan custom Header banavie tyare tema aagad name ma X lakhvanu like X-myname to developer ne khabar pade ke aa custom Header che em
   res.json(jsondata);
 });
 
