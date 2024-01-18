@@ -117,3 +117,11 @@ strong support for aggregation pipes
 works on BSON format
 Best for node application
 Mongodb che te document based hoy means tema ek collection hoy users name nu to e collection ma multiple document hoy have te document means actually entry hoy data ni 
+
+->ServerSide Rendering:- aapde server side rendering mate ejs use karsu ena mate aapde express ne kevu padse ke ame view engie tarike ejs use karie chie em 
+to ena mate ShortURLProject ma index.js ne dhyan ma lo
+
+>Authentication:-
+Authentication 2 types nu hoy che 1>Statefull(which maintains state or data on server side)2>Stateless(which has no state)
+Stateful authentication ma evu hoy ke jyare client server par request kare username ane password lai ne to  tyare server che te client ne ek session uid mokle have server che te session uid ne kyak store kari rakhe have jyare fari client kaik GET ke POST request mokalse tyare te request jode session uid pan mokalse ane have server tene store karela data ma jose ane e incoming session uid che te data ma store hase toj tene aagd java dese
+have server che te client ne je session uid mokle che te 3 rite mokli sake 1>cookies ma 2>response ma 3>Headers ma 
